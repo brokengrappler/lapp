@@ -11,7 +11,7 @@ Using AWS to serve youth swim meet results.
    4) swim meet information
       1) swim meet results
 2) Lambda posts data above to RDS
-3) Result POST -> SQS -> 
+3) Result POST -> SQS -> SNS ->
    1) lambda to RDS
    2) lambda to SNS for results
 
