@@ -11,4 +11,11 @@ class LappStack(Stack):
     def __init__(self, scope: Construct, construct_id: str, **kwargs) -> None:
         super().__init__(scope, construct_id, **kwargs)
 
-
+        initiator = _alambda.PythonFunction(
+            self,
+            "initiator",
+            entry='./lambda/',
+            runtime=Runtime.PYTHON_3_8,
+            index='post_swimmer_v1.py',
+            handler='handle'
+        )
