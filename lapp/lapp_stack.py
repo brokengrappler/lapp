@@ -16,6 +16,6 @@ class LappStack(Stack):
             "initiator",
             entry='./lambda/',
             runtime=Runtime.PYTHON_3_8,
-            index='foo.py',
+            index='post_swimmer_v1.py',
             handler='handle'
         )
