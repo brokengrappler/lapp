@@ -21,9 +21,8 @@ def lambda_handler(event, context):
 
 def write_to_db(event):
     epochms = event['requestContext']['timeEpoch']
-    updated_at = datetime.fromtimestamp(epochms/1000).strftime('%Y-%m-%d')
     data = json.loads(event['body'].replace("'", "\""))
-    data['updated_at'] = updated_at
+    data['updated_at'] = datetime.fromtimestamp(epochms/1000).strftime('%Y-%m-%d')
     table_name = 'swimmers'
     data_columns = [k for k in data.keys()]
     data_values = [v for v in data.values()]

@@ -1,8 +1,9 @@
 
 # LAPP MVP
 
-Using AWS to serve youth swim meet results.
-
+~~Using AWS to serve youth swim meet results.~~
+You to expensive AWS. Take my data GCP and help me get this up 
+for cheaper.
 
 1) Serve POST API in AWS to upload
    1) swimmer id and info
